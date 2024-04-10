@@ -1,9 +1,10 @@
 {
   "version": 2,
   "builds": [
-    { "src": "app.py", "use": "@vercel/python" }
-  ],
-  "routes": [
-    { "src": "/(.*)", "dest": "/app.py" }
+    {
+      "src": "build.sh",
+      "use": "@vercel/build-utils",
+      "config": { "python": "3.9.x" }
+    }
   ]
 }
